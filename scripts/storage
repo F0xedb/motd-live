@@ -1,0 +1,27 @@
+#!/bin/bash
+
+bar_width=32
+green="\e[1;32m"
+red="\e[1;31m"
+CLEAR="\033[0m"
+
+printf "\n\e[36mDisk usage:\e[0m\n"
+
+for line in $MOTD_DEV; do
+	size="$(df -h $line | tail -n1 | awk '{printf $2}')"
+	usage="$(df -h $line | tail -n1 | awk '{printf $3}')"
+	usage_num="$(echo $usage | sed 's/[a-zA-Z]//')"
+	size_num="$(echo $size | sed 's/[a-zA-Z]//')"
+	usage_num=$((usage_num*100/size_num))
+	used_width=$((($usage_num*$bar_width)/100))
+	out="$line\t[$red"
+	for ((i=0; i<$used_width; i++)); do
+		out+="="
+	done
+	out+="$CLEAR$green"
+	for ((i=$used_width; i <$bar_width; i++)); do
+		out+="="
+	done
+	out+="$CLEAR] $usage/$size"
+	echo -e "$CLEAR$out"
+done

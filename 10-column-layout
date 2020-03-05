@@ -1,0 +1,16 @@
+#!/bin/bash
+export LANG='en_US.UTF-8'
+export MOTD_DEV="/dev/nvme0n1p2 /dev/nvme0n1p1"
+export MOTD_NAME="Tos Server"
+export MOTD_UPS="0" # 0 to disable
+
+path="${ROOT_PATH:-/etc/update-motd.d/}"
+if [[ ! $(echo "${str:$path:1}") == "/" ]]; then
+    path="$path/"
+fi
+
+paste <("$path"scripts/header && "$path"scripts/ups-status) <("$path"scripts/storage) | column -s $'\t' -t
+
+echo ""
+
+paste <("$path"scripts/ssl) <("$path"scripts/services) | column -s $'\t' -t
