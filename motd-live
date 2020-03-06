@@ -1,0 +1,10 @@
+#!/bin/bash
+
+location="/etc/motd-live"
+
+# clean up old motd file
+printf "" > /etc/motd
+
+for file in $(find "$location" -maxdepth 1 -type f -name '[[:digit:]]*' | grep -E '.*/[0-9]+'); do
+    bash "$file" >> /etc/motd
+done
