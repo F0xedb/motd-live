@@ -7,7 +7,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/F0xedb/motd">
+  <a href="https://github.com/F0xedb/motd-live">
     <img src="https://tos.pbfp.xyz/images/logo.svg" alt="Logo" width="150" height="200">
   </a>
 
@@ -16,14 +16,14 @@
   <p align="center">
     Easily generate nice and life updating motd
     <br />
-    <a href="https://github.com/F0xedb/motd"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/F0xedb/motd-live"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/F0xedb/motd">View Demo</a>
+    <a href="https://github.com/F0xedb/motd-live">View Demo</a>
     ·
-    <a href="https://github.com/F0xedb/motd/issues">Report Bug</a>
+    <a href="https://github.com/F0xedb/motd-live/issues">Report Bug</a>
     ·
-    <a href="https://github.com/F0xedb/motd/issues">Request Feature</a>
+    <a href="https://github.com/F0xedb/motd-live/issues">Request Feature</a>
   </p>
 </p>
 
@@ -66,7 +66,7 @@ pacman -Syu cronie
 1. Clone the motd
 
 ```sh
-git clone https://github.com/F0xedb/motd.git
+git clone https://github.com/F0xedb/motd-live.git
 ```
 
 2. Install packages
@@ -119,13 +119,13 @@ if you want a script that should not be included in the final motd add then to t
 If you wish to manually update the `/etc/motd` file run the command motd-live to update it.
 Each new ssh login should then display the updated motd file.
 
-_For more examples, please refer to the [Documentation](https://github.com/F0xedb/motd)_
+_For more examples, please refer to the [Documentation](https://github.com/F0xedb/motd-live)_
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/F0xedb/motd/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/F0xedb/motd-live/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -151,25 +151,25 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 F0xedb - tom@odex.be
 
-Project Link: [https://github.com/F0xedb/motd](https://github.com/F0xedb/motd)
+Project Link: [https://github.com/F0xedb/motd-live](https://github.com/F0xedb/motd-live)
 
 <!-- ACKNOWLEDGEMENTS -->
 
 ## Acknowledgements
 
-- [F0xedb](https://github.com/F0xedb/motd)
+- [F0xedb](https://github.com/F0xedb/motd-live)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
 [contributors-shield]: https://img.shields.io/github/contributors/F0xedb/motd.svg?style=flat-square
-[contributors-url]: https://github.com/F0xedb/motd/graphs/contributors
+[contributors-url]: https://github.com/F0xedb/motd-live/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/F0xedb/motd.svg?style=flat-square
-[forks-url]: https://github.com/F0xedb/motd/network/members
+[forks-url]: https://github.com/F0xedb/motd-live/network/members
 [stars-shield]: https://img.shields.io/github/stars/F0xedb/motd.svg?style=flat-square
-[stars-url]: https://github.com/F0xedb/motd/stargazers
+[stars-url]: https://github.com/F0xedb/motd-live/stargazers
 [issues-shield]: https://img.shields.io/github/issues/F0xedb/motd.svg?style=flat-square
-[issues-url]: https://github.com/F0xedb/motd/issues
+[issues-url]: https://github.com/F0xedb/motd-live/issues
 [license-shield]: https://img.shields.io/github/license/F0xedb/motd.svg?style=flat-square
-[license-url]: https://github.com/F0xedb/motd/blob/master/LICENSE.txt
+[license-url]: https://github.com/F0xedb/motd-live/blob/master/LICENSE.txt
 [product-screenshot]: https://tos.pbfp.xyz/images/logo.svg
