@@ -8,7 +8,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/F0xedb/motd-live">
-    <img src="https://tos.pbfp.xyz/images/logo.svg" alt="Logo" width="150" height="200">
+    <img src="https://tos.odex.be/images/logo.svg" alt="Logo" width="150" height="200">
   </a>
 
   <h3 align="center">Update-MOTD</h3>
@@ -172,4 +172,4 @@ Project Link: [https://github.com/F0xedb/motd-live](https://github.com/F0xedb/mo
 [issues-url]: https://github.com/F0xedb/motd-live/issues
 [license-shield]: https://img.shields.io/github/license/F0xedb/motd.svg?style=flat-square
 [license-url]: https://github.com/F0xedb/motd-live/blob/master/LICENSE.txt
-[product-screenshot]: https://tos.pbfp.xyz/images/logo.svg
+[product-screenshot]: https://tos.odex.be/images/logo.svg
