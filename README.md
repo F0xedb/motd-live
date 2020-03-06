@@ -47,11 +47,12 @@
 
 ## About The Project
 
+MOTD is a life updating message of the day script extending the update-motd framework developed by canonical
+[MOTD screenshot](images/motd-example.png)
+
 <!-- GETTING STARTED -->
 
 ## Getting Started
-
-MOTD is a life updating message of the day script extending the update-motd framework developed by canonical
 
 ### Prerequisites
 
