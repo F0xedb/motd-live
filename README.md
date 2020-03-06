@@ -84,7 +84,7 @@ cp motd /etc/cron.d
 4. Move the motd-live script to /usr/bin
 
 ```sh
-cp motd-live /usr/bin
+cp motd-live-cm /usr/bin/motd-live
 ```
 
 5. Add all other files to the /etc/motd-live directory
