@@ -1,31 +1,175 @@
-# motd
+[![Contributors][contributors-shield]][contributors-url]
+[![Forks][forks-shield]][forks-url]
+[![Stargazers][stars-shield]][stars-url]
+[![Issues][issues-shield]][issues-url]
+[![MIT License][license-shield]][license-url]
 
-This is my personal MOTD, I am accepting contributions now from people who are interested in personalizing their MOTD to make it more interesting. My idea here is to create a minimal motd that has the most amount of information about your system in the least amount of space and gets more verbose only when things fail.
+<!-- PROJECT LOGO -->
+<br />
+<p align="center">
+  <a href="https://github.com/F0xedb/motd">
+    <img src="https://tos.pbfp.xyz/images/logo.svg" alt="Logo" width="150" height="200">
+  </a>
 
-![image of motd](https://raw.githubusercontent.com/HermannBjorgvin/motd/master/minimal%20motd.png)
+  <h3 align="center">Update-MOTD</h3>
 
-My idea for this is to create two column rackmount style layout where each column is 34 characters wide and each unit is 1 line, with 2 spaces between the column this makes the motd 70 characters wide which I found ideal for my personal use.
+  <p align="center">
+    Easily generate nice and life updating motd
+    <br />
+    <a href="https://github.com/F0xedb/motd"><strong>Explore the docs »</strong></a>
+    <br />
+    <br />
+    <a href="https://github.com/F0xedb/motd">View Demo</a>
+    ·
+    <a href="https://github.com/F0xedb/motd/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/F0xedb/motd/issues">Request Feature</a>
+  </p>
+</p>
 
-Here is an illustration of this kind of layout:
+<!-- TABLE OF CONTENTS -->
+
+## Table of Contents
+
+- [About the Project](#about-the-project)
+  - [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+- [Usage](#usage)
+- [Roadmap](#roadmap)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
+- [Acknowledgements](#acknowledgements)
+
+<!-- ABOUT THE PROJECT -->
+
+## About The Project
+
+<!-- GETTING STARTED -->
+
+## Getting Started
+
+MOTD is a life updating message of the day script extending the update-motd framework developed by canonical
+
+### Prerequisites
+
+We only have one dependency which is cron
+
+```sh
+pacman -Syu cronie
 ```
-[============ 3 unit ============]  [============ 1 unit ============]
-[============ 3 unit ============]
-[============ 3 unit ============]  [============ 4 unit ============]
-                                    [============ 4 unit ============]
-[============ 2 unit ============]  [============ 4 unit ============]
-[============ 2 unit ============]  [============ 4 unit ============]
 
-[=========================== spanning unit ==========================]
+### Installation
+
+1. Clone the motd
+
+```sh
+git clone https://github.com/F0xedb/motd.git
 ```
 
-Modules I have created for myself:
-  * TLS certificate expiration checker
-  * Systemctl services checker
-  * APC UPS status indicator
-  * Hard disk temperature monitor
-  * ZFS zpool space usage
+2. Install packages
 
-Note that these services are not able to be customized by any configuration parameters, for example the TLS certificate checker basically requires a specific length domain to line up correctly to the 34 character standard.
+```sh
+pacman -Syu cronie
+```
 
-I would also like to thank everyone whos code I used in this project, people on reddit, other repositories, stack overflow snippets.
+3. Add the cronfile to /etc/cron.d
 
+```sh
+cp motd /etc/cron.d
+```
+
+4. Move the motd-live script to /usr/bin
+
+```sh
+cp motd-live /usr/bin
+```
+
+5. Add all other files to the /etc/motd-live directory
+
+```sh
+mkdir -p /etc/motd-live
+cp -r . /etc/motd-live
+```
+
+6. Start the cron service
+
+```sh
+systemctl start cronie
+systemctl enable cronie
+```
+
+7. Test if the cronjob is working
+
+```sh
+cat /etc/motd # this should output the correct information
+```
+
+<!-- USAGE EXAMPLES -->
+
+## Usage
+
+All you have to do is add shell scripts in the `/etc/motd-live directory`.
+Each file will be executed and then appended to the `/etc/motd` file to generate the final output.
+It works much like `update-motd` from ubuntu but without much of their dependencies for easier use between more operating systems.
+if you want a script that should not be included in the final motd add then to the `/etc/motd-live/scripts` directory
+
+If you wish to manually update the `/etc/motd` file run the command motd-live to update it.
+Each new ssh login should then display the updated motd file.
+
+_For more examples, please refer to the [Documentation](https://github.com/F0xedb/motd)_
+
+<!-- ROADMAP -->
+
+## Roadmap
+
+See the [open issues](https://github.com/F0xedb/motd/issues) for a list of proposed features (and known issues).
+
+<!-- CONTRIBUTING -->
+
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+<!-- LICENSE -->
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+<!-- CONTACT -->
+
+## Contact
+
+F0xedb - tom@odex.be
+
+Project Link: [https://github.com/F0xedb/motd](https://github.com/F0xedb/motd)
+
+<!-- ACKNOWLEDGEMENTS -->
+
+## Acknowledgements
+
+- [F0xedb](https://github.com/F0xedb/motd)
+
+<!-- MARKDOWN LINKS & IMAGES -->
+<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
+
+[contributors-shield]: https://img.shields.io/github/contributors/F0xedb/motd.svg?style=flat-square
+[contributors-url]: https://github.com/F0xedb/motd/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/F0xedb/motd.svg?style=flat-square
+[forks-url]: https://github.com/F0xedb/motd/network/members
+[stars-shield]: https://img.shields.io/github/stars/F0xedb/motd.svg?style=flat-square
+[stars-url]: https://github.com/F0xedb/motd/stargazers
+[issues-shield]: https://img.shields.io/github/issues/F0xedb/motd.svg?style=flat-square
+[issues-url]: https://github.com/F0xedb/motd/issues
+[license-shield]: https://img.shields.io/github/license/F0xedb/motd.svg?style=flat-square
+[license-url]: https://github.com/F0xedb/motd/blob/master/LICENSE.txt
+[product-screenshot]: https://tos.pbfp.xyz/images/logo.svg
