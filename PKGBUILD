@@ -11,7 +11,7 @@ license=('MIT')
 source=(
 "git+https://github.com/F0xedb/motd-live.git")
 md5sums=('SKIP')
-depends=('bash' 'cronie')
+depends=('bash' 'cronie' 'figlet')
 makedepends=('git')
 
 pkgver() {
