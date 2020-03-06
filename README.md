@@ -162,14 +162,14 @@ Project Link: [https://github.com/F0xedb/motd-live](https://github.com/F0xedb/mo
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/F0xedb/motd.svg?style=flat-square
+[contributors-shield]: https://img.shields.io/github/contributors/F0xedb/motd-live.svg?style=flat-square
 [contributors-url]: https://github.com/F0xedb/motd-live/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/F0xedb/motd.svg?style=flat-square
+[forks-shield]: https://img.shields.io/github/forks/F0xedb/motd-live.svg?style=flat-square
 [forks-url]: https://github.com/F0xedb/motd-live/network/members
-[stars-shield]: https://img.shields.io/github/stars/F0xedb/motd.svg?style=flat-square
+[stars-shield]: https://img.shields.io/github/stars/F0xedb/motd-live.svg?style=flat-square
 [stars-url]: https://github.com/F0xedb/motd-live/stargazers
-[issues-shield]: https://img.shields.io/github/issues/F0xedb/motd.svg?style=flat-square
+[issues-shield]: https://img.shields.io/github/issues/F0xedb/motd-live.svg?style=flat-square
 [issues-url]: https://github.com/F0xedb/motd-live/issues
-[license-shield]: https://img.shields.io/github/license/F0xedb/motd.svg?style=flat-square
+[license-shield]: https://img.shields.io/github/license/F0xedb/motd-live.svg?style=flat-square
 [license-url]: https://github.com/F0xedb/motd-live/blob/master/LICENSE.txt
 [product-screenshot]: https://tos.odex.be/images/logo.svg
