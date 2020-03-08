@@ -2,9 +2,17 @@
 
 location="/etc/motd-live"
 
+if [[ ! "$(id -u)" == "0" ]]; then
+    echo "[ERROR] You are not a root user. Cannot update /etc/motd..."
+    echo "[INFO] Aborting now"
+    exit 1
+fi
+
 # clean up old motd file
 printf "" > /etc/motd
 
 for file in $(find "$location" -maxdepth 1 -type f -name '[[:digit:]]*' | grep -E '.*/[0-9]+'); do
     bash "$file" >> /etc/motd
 done
+
+echo "[SUCCESS] /etc/motd has been updated"
